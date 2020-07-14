@@ -52,7 +52,7 @@ class Contact extends Component {
     }
 
     const reg = /^\d+$/;
-      if (this.state.touched.phoneNum &&& !reg.test(phoneNum)) {
+      if (this.state.touched.phoneNum && !reg.test(phoneNum)) {
         errors.phoneNum = 'This aint no number,';
       }
       if (this.state.touched.email && !email.includes('@')) {
@@ -89,7 +89,7 @@ class Contact extends Component {
   render() {
 
     const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
-    
+
     return (
       <div className="container">
         <div className="row">

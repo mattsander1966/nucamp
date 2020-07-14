@@ -9,7 +9,7 @@ import { PROMOTIONS } from "../shared/promotions";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
-import About from "./AboutComponent;
+import About from "./AboutComponent";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends Component {
