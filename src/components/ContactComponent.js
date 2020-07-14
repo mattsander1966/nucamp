@@ -23,6 +23,7 @@ class Contact extends Component {
         email: false
       }
     };
+
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -51,12 +52,12 @@ class Contact extends Component {
     }
 
     const reg = /^\d+$/;
-    if (this.state.touched.phoneNum &&& !reg.test(phoneNum)) {
-      errors.phoneNum = 'This aint no number,';
-    }
-    if (this.state.touched.email && !email.includes('@')) {
-      errors.email = 'Email should contain the @ symbol';
-    }
+      if (this.state.touched.phoneNum &&& !reg.test(phoneNum)) {
+        errors.phoneNum = 'This aint no number,';
+      }
+      if (this.state.touched.email && !email.includes('@')) {
+        errors.email = 'Email should contain the @ symbol';
+      }
 
     return errors;
 
@@ -88,6 +89,7 @@ class Contact extends Component {
   render() {
 
     const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
+    
     return (
       <div className="container">
         <div className="row">
