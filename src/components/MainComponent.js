@@ -7,7 +7,7 @@ import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import About from "./AboutComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
-import { connect } form 'react-redux';
+import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
   return {
@@ -55,11 +55,11 @@ class Main extends Component {
           <Route
             exact
             path="/directory"
-            render={() => <Directory campsites={this.state.campsites} />}
+            render={() => <Directory campsites={this.props.campsites} />}
           />
           <Route exact path="/contactus" component={Contact} />
           <Route path="/directory/:campsiteId" component={CampsiteWithId} />
-          <Route exact path="/aboutus" render={() => <About partners={this.state.partners} />} />
+          <Route exact path="/aboutus" render={() => <About partners={this.props.partners} />} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
